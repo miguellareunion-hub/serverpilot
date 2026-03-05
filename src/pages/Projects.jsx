@@ -72,8 +72,20 @@ export default function Projects() {
 
   return (
     <div className="space-y-5">
-      <PageHeader title="Projets" description="Déployez et gérez vos applications"
-        action="Nouveau projet" onAction={() => { setEditing(null); setShowForm(true); }} />
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 className="text-xl font-bold text-white">Projets</h2>
+          <p className="text-sm text-slate-400 mt-0.5">Déployez et gérez vos applications</p>
+        </div>
+        <div className="flex gap-2">
+          <Button onClick={() => setShowAutoInstall(true)} className="bg-indigo-600 hover:bg-indigo-500 text-white gap-2 text-sm">
+            <Zap className="h-4 w-4" /> Auto Install
+          </Button>
+          <Button variant="outline" onClick={() => { setEditing(null); setShowForm(true); }} className="border-white/10 text-white hover:bg-white/5 gap-2 text-sm">
+            + Nouveau projet
+          </Button>
+        </div>
+      </div>
 
       {projects.length === 0 && !isLoading ? (
         <EmptyState icon={FolderGit2} title="Aucun projet" description="Importez ou créez votre premier projet."
