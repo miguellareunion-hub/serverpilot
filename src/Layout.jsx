@@ -26,7 +26,7 @@ export default function Layout({ children, currentPageName }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#0a0e1a] text-white flex">
+    <div className="min-h-screen bg-[#0a0e1a] text-white flex overflow-hidden">
       <style>{`
         :root {
           --accent: #6366f1;
