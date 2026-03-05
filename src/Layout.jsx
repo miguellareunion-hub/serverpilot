@@ -19,6 +19,7 @@ const navItems = [
   { name: "Logs", icon: ScrollText, page: "Logs" },
   { name: "Outils IA", icon: Brain, page: "AITools" },
   { name: "Sauvegardes", icon: Archive, page: "Backups" },
+  { name: "Installation", icon: Terminal, page: "InstallGuide" },
 ];
 
 export default function Layout({ children, currentPageName }) {
