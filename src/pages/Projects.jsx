@@ -127,6 +127,9 @@ export default function Projects() {
                   <Button size="sm" variant="ghost" onClick={() => { setEditing(project); setShowForm(true); }} className="text-slate-400 hover:bg-white/5">
                     <Pencil className="h-3.5 w-3.5" />
                   </Button>
+                  <Button size="sm" variant="ghost" onClick={() => setLogsProject(project)} className="text-slate-400 hover:bg-white/5 gap-1 text-xs">
+                    <ScrollText className="h-3.5 w-3.5" /> Logs
+                  </Button>
                   <Button size="sm" variant="ghost" onClick={() => setDeleting(project)} className="text-rose-400 hover:bg-rose-500/10">
                     <Trash2 className="h-3.5 w-3.5" />
                   </Button>
