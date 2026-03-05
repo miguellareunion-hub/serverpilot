@@ -132,7 +132,7 @@ export default function Layout({ children, currentPageName }) {
           </Button>
         </header>
 
-        <div className="flex-1 p-4 lg:p-6 overflow-y-auto overflow-x-hidden">
+        <div className="flex-1 p-4 lg:p-6 overflow-y-auto overflow-x-hidden min-h-0">
           {children}
         </div>
       </main>
