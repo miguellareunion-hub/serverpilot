@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
-import { FolderGit2, Play, Square, RotateCcw, Trash2, Pencil } from "lucide-react";
+import { FolderGit2, Play, Square, RotateCcw, Trash2, Pencil, Zap, ScrollText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import StatusBadge from "../components/shared/StatusBadge";
 import PageHeader from "../components/shared/PageHeader";
 import EmptyState from "../components/shared/EmptyState";
 import ProjectFormDialog from "../components/projects/ProjectFormDialog";
+import AutoInstallDialog from "../components/projects/AutoInstallDialog";
 import { toast } from "sonner";
 
 const typeIcon = { nodejs: "🟢", python: "🐍", docker: "🐳", static: "📄", other: "📦" };
