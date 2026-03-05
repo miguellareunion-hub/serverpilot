@@ -50,9 +50,9 @@ export default function Layout({ children, currentPageName }) {
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:sticky top-0 left-0 h-screen z-50
+        fixed lg:relative top-0 left-0 h-screen z-50
         bg-[#111827]/95 backdrop-blur-xl border-r border-white/5
-        transition-all duration-300 ease-in-out flex flex-col
+        transition-all duration-300 ease-in-out flex flex-col flex-shrink-0
         ${collapsed ? 'w-[72px]' : 'w-64'}
         ${mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
