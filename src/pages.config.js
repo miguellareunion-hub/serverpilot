@@ -56,6 +56,7 @@ import Monitoring from './pages/Monitoring';
 import Projects from './pages/Projects';
 import Servers from './pages/Servers';
 import UserManagement from './pages/UserManagement';
+import InstallGuide from './pages/InstallGuide';
 import __Layout from './Layout.jsx';
 
 
@@ -69,6 +70,7 @@ export const PAGES = {
     "Projects": Projects,
     "Servers": Servers,
     "UserManagement": UserManagement,
+    "InstallGuide": InstallGuide,
 }
 
 export const pagesConfig = {
