@@ -58,6 +58,7 @@ import Servers from './pages/Servers';
 import UserManagement from './pages/UserManagement';
 import InstallGuide from './pages/InstallGuide';
 import LocalBackend from './pages/LocalBackend';
+import StandaloneExport from './pages/StandaloneExport';
 import __Layout from './Layout.jsx';
 
 
@@ -73,6 +74,7 @@ export const PAGES = {
     "UserManagement": UserManagement,
     "InstallGuide": InstallGuide,
     "LocalBackend": LocalBackend,
+    "StandaloneExport": StandaloneExport,
 }
 
 export const pagesConfig = {
