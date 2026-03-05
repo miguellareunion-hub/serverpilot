@@ -21,6 +21,7 @@ const navItems = [
   { name: "Sauvegardes", icon: Archive, page: "Backups" },
   { name: "Installation", icon: Terminal, page: "InstallGuide" },
   { name: "Backend Local", icon: HardDrive, page: "LocalBackend" },
+  { name: "Export Standalone", icon: Download, page: "StandaloneExport" },
 ];
 
 export default function Layout({ children, currentPageName }) {
