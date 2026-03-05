@@ -20,6 +20,7 @@ const navItems = [
   { name: "Outils IA", icon: Brain, page: "AITools" },
   { name: "Sauvegardes", icon: Archive, page: "Backups" },
   { name: "Installation", icon: Terminal, page: "InstallGuide" },
+  { name: "Backend Local", icon: HardDrive, page: "LocalBackend" },
 ];
 
 export default function Layout({ children, currentPageName }) {
