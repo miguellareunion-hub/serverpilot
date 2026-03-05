@@ -143,6 +143,32 @@ export default function Projects() {
 
       <ProjectFormDialog open={showForm} onOpenChange={setShowForm} project={editing} servers={servers} onSave={handleSave} />
 
+      <AutoInstallDialog
+        open={showAutoInstall}
+        onOpenChange={setShowAutoInstall}
+        usedPorts={projects.map(p => p.port).filter(Boolean)}
+        onInstallComplete={handleAutoInstallComplete}
+      />
+
+      {/* Logs modal */}
+      <Dialog open={!!logsProject} onOpenChange={() => setLogsProject(null)}>
+        <DialogContent className="bg-[#111827] border-white/10 text-white max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-white flex items-center gap-2">
+              <ScrollText className="h-4 w-4 text-slate-400" /> Logs — {logsProject?.name}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="bg-black/40 rounded-xl p-3 h-64 overflow-y-auto font-mono text-xs border border-white/5 space-y-0.5">
+            <div className="text-cyan-400">[INFO] Project: {logsProject?.name}</div>
+            <div className="text-cyan-400">[INFO] Type: {logsProject?.type}</div>
+            <div className="text-cyan-400">[INFO] Port: {logsProject?.port}</div>
+            <div className="text-cyan-400">[INFO] Status: {logsProject?.status}</div>
+            {logsProject?.last_deploy_at && <div className="text-slate-400">[INFO] Last deploy: {new Date(logsProject.last_deploy_at).toLocaleString("fr-FR")}</div>}
+            <div className="text-slate-600 mt-2">— Les logs en temps réel nécessitent une connexion SSH active —</div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <AlertDialog open={!!deleting} onOpenChange={() => setDeleting(null)}>
         <AlertDialogContent className="bg-[#111827] border-white/10">
           <AlertDialogHeader>
