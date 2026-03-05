@@ -18,6 +18,8 @@ export default function Projects() {
   const [showForm, setShowForm] = useState(false);
   const [editing, setEditing] = useState(null);
   const [deleting, setDeleting] = useState(null);
+  const [showAutoInstall, setShowAutoInstall] = useState(false);
+  const [logsProject, setLogsProject] = useState(null);
   const queryClient = useQueryClient();
 
   const { data: projects = [], isLoading } = useQuery({ queryKey: ["projects"], queryFn: () => base44.entities.Project.list("-created_date") });
