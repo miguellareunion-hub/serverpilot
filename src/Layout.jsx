@@ -4,7 +4,7 @@ import { createPageUrl } from "@/utils";
 import {
   LayoutDashboard, Server, FolderGit2, Package, Users, ScrollText,
   Brain, HardDrive, Archive, ChevronLeft, ChevronRight,
-  Terminal, Menu, LogOut, Activity
+  Terminal, Menu, LogOut, Activity, Download
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
