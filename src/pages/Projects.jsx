@@ -60,6 +60,16 @@ export default function Projects() {
 
   const serverName = (id) => servers.find(s => s.id === id)?.name || "—";
 
+  const handleAutoInstallComplete = async (projectData) => {
+    const usedPorts = projects.map(p => p.port).filter(Boolean);
+    let port = projectData.port;
+    while (usedPorts.includes(port)) port++;
+    const created = await createMutation.mutateAsync({ ...projectData, port });
+    toast.success(`✅ ${created.name} installé et démarré sur :${port} !`);
+    // Log entry
+    await base44.entities.LogEntry.create({ level: "success", category: "project", message: `Auto-install: ${created.name} démarré sur :${port}`, details: `Type: ${created.type}` });
+  };
+
   return (
     <div className="space-y-5">
       <PageHeader title="Projets" description="Déployez et gérez vos applications"
