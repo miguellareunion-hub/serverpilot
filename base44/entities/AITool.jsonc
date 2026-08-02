@@ -1,0 +1,65 @@
+{
+  "name": "AITool",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "cloud",
+        "local"
+      ],
+      "default": "cloud"
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "openai",
+        "gemini",
+        "ollama",
+        "localai",
+        "anthropic",
+        "other"
+      ],
+      "default": "other"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_default": {
+      "type": "boolean",
+      "default": false
+    },
+    "api_key": {
+      "type": "string"
+    },
+    "endpoint": {
+      "type": "string"
+    },
+    "default_model": {
+      "type": "string"
+    },
+    "server_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "file",
+        "code",
+        "analysis",
+        "api"
+      ],
+      "default": "api"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

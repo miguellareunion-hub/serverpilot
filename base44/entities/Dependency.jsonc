@@ -1,0 +1,36 @@
+{
+  "name": "Dependency",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "server_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "installed",
+        "not_installed",
+        "checking",
+        "installing",
+        "updating"
+      ],
+      "default": "not_installed"
+    },
+    "version": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "last_checked_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

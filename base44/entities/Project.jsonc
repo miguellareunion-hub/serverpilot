@@ -1,0 +1,63 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "server_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "nodejs",
+        "python",
+        "docker",
+        "static",
+        "other"
+      ],
+      "default": "other"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "stopped",
+        "running",
+        "installing",
+        "error",
+        "deploying"
+      ],
+      "default": "stopped"
+    },
+    "port": {
+      "type": "number"
+    },
+    "path": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "zip_url": {
+      "type": "string"
+    },
+    "env_vars": {
+      "type": "string"
+    },
+    "auto_start": {
+      "type": "boolean",
+      "default": false
+    },
+    "last_deploy_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

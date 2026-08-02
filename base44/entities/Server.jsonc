@@ -1,0 +1,87 @@
+{
+  "name": "Server",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Server display name"
+    },
+    "host": {
+      "type": "string",
+      "description": "Host or IP address"
+    },
+    "port": {
+      "type": "number",
+      "default": 22,
+      "description": "SSH port"
+    },
+    "username": {
+      "type": "string",
+      "description": "SSH username"
+    },
+    "auth_type": {
+      "type": "string",
+      "enum": [
+        "password",
+        "ssh_key"
+      ],
+      "default": "password"
+    },
+    "password": {
+      "type": "string",
+      "description": "SSH password (if auth_type=password)"
+    },
+    "ssh_private_key": {
+      "type": "string",
+      "description": "SSH private key content"
+    },
+    "ssh_passphrase": {
+      "type": "string",
+      "description": "SSH key passphrase"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "os": {
+      "type": "string"
+    },
+    "cpu_usage": {
+      "type": "number"
+    },
+    "ram_usage": {
+      "type": "number"
+    },
+    "disk_usage": {
+      "type": "number"
+    },
+    "uptime": {
+      "type": "string"
+    },
+    "last_checked": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "name",
+    "host",
+    "username"
+  ]
+}

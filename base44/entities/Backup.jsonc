@@ -1,0 +1,46 @@
+{
+  "name": "Backup",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "project",
+        "database",
+        "full"
+      ],
+      "default": "project"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "failed"
+      ],
+      "default": "queued"
+    },
+    "size": {
+      "type": "string"
+    },
+    "server_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "LogEntry",
+  "type": "object",
+  "properties": {
+    "level": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "error",
+        "success"
+      ],
+      "default": "info"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "server",
+        "project",
+        "dependency",
+        "auth",
+        "backup",
+        "ai",
+        "system"
+      ],
+      "default": "system"
+    },
+    "message": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "server_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "message"
+  ]
+}
